@@ -10,7 +10,6 @@ from PIL import Image
 
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
-
 def get_gemini_repsonse(input,image,prompt):
     model=genai.GenerativeModel('gemini-pro-vision')
     response=model.generate_content([input,image[0],prompt])
